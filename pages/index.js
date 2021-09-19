@@ -31,7 +31,7 @@ export default function Home() {
     </form>
 
       <footer className={styles.footer}>
-          Powered by Nify Tech
+          By Akila and Bennet
       </footer>
     </div>
   )

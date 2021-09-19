@@ -5,6 +5,8 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
     const numToSend = async event => {
       event.preventDefault()
+
+      
   
       const response = await fetch('http://192.95.46.251:3333/sendText', {
         method: 'POST',
@@ -23,6 +25,8 @@ export default function Home() {
       const content = await response.json();
 
       console.log(content);
+
+      alert("Mensagem enviada!");
     }
   return (
     <div className={styles.container}>

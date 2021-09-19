@@ -22,13 +22,15 @@ export default function Home() {
         <h1 className={styles.title}>
           Bem vindo a Sendzap
         </h1>
+        <p>Está é uma simples aplicação web para enviar mensagens via whatsapp anonimamente</p>
+        <p>Siga o formato 551197XXXXXXX para o número</p>
       </main>
 
       <form onSubmit={numToSend}>
-      <label htmlFor="num">Número</label>
-      <input id="num" num="num" type="text" autoComplete="num" required />
-      <button type="submit">Enviar</button>
-    </form>
+        <label htmlFor="num">Número</label>
+        <input id="num" num="num" type="text" autoComplete="num" required />
+        <button type="submit">Enviar</button>
+      </form>
 
       <footer className={styles.footer}>
           By Akila and Bennet

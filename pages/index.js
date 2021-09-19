@@ -5,26 +5,10 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
     const numToSend = async event => {
       event.preventDefault()
+
+      location.href = './s/' + event.target.num.value
   
-      const response = await fetch('http://192.95.46.251:3333/sendText', {
-        method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(
-            {
-                sessionName: "senzap", 
-                number: `${event.target.num.value}`,
-                text:"Hey, nice dick bro!\n\nEntre já qui: https://sendzap.in"
-            }
-        )
-      });
-      const content = await response.json();
-
-      console.log(content);
-
-      alert("Mensagem enviada!");
+      //event.target.num.value
     }
   return (
     <div className={styles.container}>

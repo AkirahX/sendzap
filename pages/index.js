@@ -5,10 +5,8 @@ import styles from '../styles/Home.module.css'
 export default function Home() {
     const numToSend = async event => {
       event.preventDefault()
-
       location.href = './s/' + event.target.num.value
-  
-      //event.target.num.value
+
     }
   return (
     <div className={styles.container}>

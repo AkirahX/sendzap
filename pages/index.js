@@ -1,6 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import logo from '../public/icone.png'
 
 export default function Home() {
     const numToSend = async event => {
@@ -15,24 +16,22 @@ export default function Home() {
         <meta name="description" content="Sendzap, feito para sendar zapzap" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
+        <div className={styles.formulario}>
+          <div className={styles.nomegrande}>
+            <h1>SendZap</h1>
+          </div>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Bem vindo a Sendzap
-        </h1>
-        <p>Está é uma simples aplicação web para enviar mensagens via whatsapp anonimamente</p>
-        <p>Siga o formato 551197XXXXXXX para o número</p>
-      </main>
-
-      <form onSubmit={numToSend}>
-        <label htmlFor="num">Número</label>
-        <input id="num" num="num" type="text" autoComplete="num" required />
-        <button type="submit">Enviar</button>
-      </form>
-
-      <footer className={styles.footer}>
-          By Akila and Bennet
-      </footer>
-    </div>
+          <div className={styles.numeronome}>
+            <form onSubmit={numToSend}>
+              <label htmlFor="num">Número</label>
+              <input id="num" num="num" type="text" autoComplete="5511973584242" required />
+              <input type="submit" value="Enviar" id="button"/>
+            </form>
+          </div>
+        </div>
+        <div className={styles.logo}>
+        <Image src={logo} alt="Picture of the author" />
+        </div>
+      </div>
   )
 }

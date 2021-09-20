@@ -10,7 +10,7 @@ export default function Home() {
 
     }
   return (
-    <div className={styles.container}>
+    <div className={styles.formulario}>
       <Head>
         <title>Sendzap</title>
         <meta name="description" content="Sendzap, feito para sendar zapzap" />
@@ -24,7 +24,7 @@ export default function Home() {
           <div className={styles.numeronome}>
             <form onSubmit={numToSend}>
               <label htmlFor="num">Número</label>
-              <input id="num" num="num" type="text" autoComplete="5511973584242" required />
+              <input id="num" num="num" type="text" autoComplete="5511973584242" required /><br/>
               <input type="submit" value="Enviar" id="button"/>
             </form>
           </div>

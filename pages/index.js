@@ -16,10 +16,11 @@ export default function Home() {
         <meta name="description" content="Sendzap, feito para sendar zapzap" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-        <div className={styles.formulario}>
-          <div className={styles.nomegrande}>
+      <div className={styles.nomegrande}>
             <h1>SendZap</h1>
           </div>
+        <div className={styles.formulario}>
+          
 
           <div className={styles.numeronome}>
             <form onSubmit={numToSend}>

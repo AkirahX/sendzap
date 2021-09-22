@@ -29,7 +29,7 @@ export default function Home() {
               <input id="num" num="num" type="text" autoComplete="5511973584242" required /><br/>
               <br/>
               <label htmlFor="msg">Mensagem (Max: 250 caractéres):</label>
-              <textarea id="msg" maxlength="250" defaultValue="" required></textarea><br/>
+              <textarea id="msg" maxLength="250" defaultValue="" required></textarea><br/>
               <input type="submit" value="Enviar" id="button"/>
               
               <GoogleReCaptchaProvider

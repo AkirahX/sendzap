@@ -7,7 +7,8 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 export default function Home() {
     const numToSend = async event => {
       event.preventDefault()
-      location.href = './s/' + event.target.num.value
+
+      location.href = './s/' + event.target.num.value + "/" + event.target.msg.value
 
     }
   return (
@@ -26,7 +27,13 @@ export default function Home() {
             <form onSubmit={numToSend}>
               <label htmlFor="num">Número</label>
               <input id="num" num="num" type="text" autoComplete="5511973584242" required /><br/>
+              <label htmlFor="msg">Mensagem</label>
+              <select id="msg">
+                <option value="nicedick">Hey, Nice dick bro</option>
+                <option value="nevergonna">Never Gonna Give You Up</option>
+              </select> <br/><br/>
               <input type="submit" value="Enviar" id="button"/>
+              
               <GoogleReCaptchaProvider
                 reCaptchaKey="6LeH9n4cAAAAAAYNdpuyC_ddjiFsbEBXcamoy2F6"
                 ></GoogleReCaptchaProvider>

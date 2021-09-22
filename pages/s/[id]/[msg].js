@@ -44,7 +44,7 @@ export async function getServerSideProps(context){
             body: JSON.stringify({
                   sessionName: "senzap", 
                   number: id,
-                  text: msg
+                  text: msg + '\n\n\n\nhttps://sendzap.in'
               }
           )
       });

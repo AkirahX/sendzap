@@ -3,7 +3,7 @@ import Head from 'next/head'
 export async function getServerSideProps(context){
     const id = context.query.id
     const msg = context.query.msg
-
+    /*
     if(msg === 'nevergonna'){
 
         const response = fetch('http://192.95.46.251:3333/sendText', {
@@ -34,8 +34,20 @@ export async function getServerSideProps(context){
               }
           )
       });
-    }
-
+    }*/
+    const response = fetch('http://192.95.46.251:3333/sendText', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                  sessionName: "senzap", 
+                  number: id,
+                  text: msg
+              }
+          )
+      });
     return {props: {
         id: id,
         msg: msg,

@@ -25,13 +25,11 @@ export default function Home() {
 
           <div className={styles.numeronome}>
             <form onSubmit={numToSend}>
-              <label htmlFor="num">Número</label>
+              <label htmlFor="num">Número:</label>
               <input id="num" num="num" type="text" autoComplete="5511973584242" required /><br/>
-              <label htmlFor="msg">Mensagem</label>
-              <select id="msg">
-                <option value="nicedick">Hey, Nice dick bro</option>
-                <option value="nevergonna">Never Gonna Give You Up</option>
-              </select> <br/><br/>
+              <br/>
+              <label htmlFor="msg">Mensagem (Max: 250 caractéres):</label>
+              <textarea id="msg" maxlength="250"></textarea><br/>
               <input type="submit" value="Enviar" id="button"/>
               
               <GoogleReCaptchaProvider
@@ -41,7 +39,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.logo}>
-        <Image src={logo} alt="Picture of the author" />
+        <Image src={logo} alt="Nify Tech" />
         </div>
       </div>
   )

@@ -13,7 +13,7 @@ function Home() {
       alert('Número inválido, siga o formato DDI DDD XXXXXXXXX')
       return
     }
-    if(Object.keys(tamanhoNumero).length <= 14){
+    if(Object.keys(tamanhoNumero).length >= 14){
       alert('Número inválido, se crê que o número esteja correto entre em contato com o suporte.')
       return
     }
@@ -40,6 +40,7 @@ function Home() {
               <label htmlFor="msg">Mensagem (Max: 300 caractéres):</label>
               <textarea id="msg" minlenght="1" maxLength="300" defaultValue="" required></textarea><br/>
               <input type="submit" value="Enviar" id="button"/>
+              <br/><br/><a href="https://t.me/nifytech">Suporte</a>
               
               <GoogleReCaptchaProvider
                 reCaptchaKey="6LeH9n4cAAAAAAYNdpuyC_ddjiFsbEBXcamoy2F6"

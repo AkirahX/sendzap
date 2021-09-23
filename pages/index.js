@@ -4,15 +4,15 @@ import styles from '../styles/Home.module.css'
 import logo from '../public/icone.png'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
-export default function Home() {
-    const numToSend = async event => {
-      event.preventDefault()
+function Home() {
 
-      location.href = './s/' + event.target.num.value + "/" + event.target.msg.value
-
-    }
+  const numToSend = async event => {
+    event.preventDefault()
+    alert('Sua mensagem será envia assim que confirmar, apóanys isso não terá como voltar atrás.')
+    location.href = './s/' + event.target.num.value + "/" + event.target.msg.value
+  }
   return (
-    <div className={styles.formulario}>
+    <div>
       <Head>
         <title>Sendzap</title>
         <meta name="description" content="Sendzap, feito para sendar zapzap" />
@@ -28,8 +28,8 @@ export default function Home() {
               <label htmlFor="num">Número:</label>
               <input id="num" num="num" type="text" autoComplete="5511973584242" required /><br/>
               <br/>
-              <label htmlFor="msg">Mensagem (Max: 250 caractéres):</label>
-              <textarea id="msg" maxLength="250" defaultValue="" required></textarea><br/>
+              <label htmlFor="msg">Mensagem (Max: 300 caractéres):</label>
+              <textarea id="msg" maxLength="300" defaultValue="" required></textarea><br/>
               <input type="submit" value="Enviar" id="button"/>
               
               <GoogleReCaptchaProvider
@@ -39,8 +39,28 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.logo}>
-        <Image src={logo} alt="Nify Tech" />
+        <Image src={logo} alt="Nify Tech"/>
+        </div>
+        <div className={styles.whatis}>
+          <br/><br/><br/><br/><br/>
+          <h1>O que é SendZap?</h1>
+          <p>SendZap é uma aplicação web com o<br/>
+             intuíto de enviar mensagens via<br/>
+            whatsapp de forma completamente anônima,<br/>
+            nenhum dado do usuário será enviado<br/>
+            com com a mensagem em si.</p>
+            <br/><br/><br/>
+            <h1>Mas para que criar isto?</h1>
+          <p>Este é um projeto completamente<br/>
+              para apreendizado dos desenvolvedores,<br/>
+              não tem como intuíto ser algo realmente<br/>
+              útil, mas com certeza não é algo totalmente<br/>
+              inútil.</p>
         </div>
       </div>
+
+      
   )
 }
+
+export default Home

@@ -1,3 +1,4 @@
+
 .nomegrande {
   color: #8880FE;
   font-size: 3rem;
@@ -60,4 +61,10 @@
 position: absolute; 
 left: 800px; 
 top: 23%;
+}
+.whatis {
+  color: #eeedfc;
+  margin-bottom: 3rem;
+  text-align: center;
+  align-items: center;
 }

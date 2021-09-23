@@ -13,6 +13,10 @@ function Home() {
       alert('Número inválido, siga o formato DDI DDD XXXXXXXXX')
       return
     }
+    if(Object.keys(tamanhoNumero).length <= 14){
+      alert('Número inválido, se crê que o número esteja correto entre em contato com o suporte.')
+      return
+    }
     alert('Sua mensagem será envia assim que confirmar, após isso não terá como cancelar.')
     location.href = './s/' + event.target.num.value + "/" + `${event.target.msg.value}`
   }

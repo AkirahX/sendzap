@@ -24,10 +24,6 @@ export async function getServerSideProps(context){
 }
 function sendToNumber(props){
         
-    if(props.error === true){
-        return <div>Err</div>
-    }
-    else{
         return (
         <div>
             <Head>
@@ -36,7 +32,6 @@ function sendToNumber(props){
 
             <h1>Redirecionando</h1>
         </div>)
-    }
     
             
     

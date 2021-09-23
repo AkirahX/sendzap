@@ -24,16 +24,21 @@ export async function getServerSideProps(context){
 }
 function sendToNumber(props){
         
-
-    return (
+    if(props.error === true){
+        return <div>Err</div>
+    }
+    else{
+        return (
         <div>
             <Head>
                 <meta httpEquiv='refresh' content='0; URL=/'></meta>
             </Head>
 
             <h1>Redirecionando</h1>
-        </div>
+        </div>)
+    }
+    
             
-    )
+    
 }
 export default sendToNumber

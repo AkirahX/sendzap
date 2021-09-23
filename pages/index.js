@@ -26,6 +26,7 @@ function Home() {
         <title>Sendzap</title>
         <meta name="description" content="Sendzap, feito para sendar zapzap" />
         <link rel="icon" href="/favicon.ico" />
+        <script data-ad-client="ca-pub-8097473106118097" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       </Head>
       <div className={styles.nomegrande}>
             <h1>SendZap</h1>
@@ -40,7 +41,7 @@ function Home() {
               <label htmlFor="msg">Mensagem (Max: 300 caractéres):</label>
               <textarea id="msg" minlenght="1" maxLength="300" defaultValue="" required></textarea><br/>
               <input type="submit" value="Enviar" id="button"/>
-              <br/><br/><a href="https://t.me/nifytech">Suporte</a>
+              <br/><br/><a href="https://t.me/nifytech">Suporte</a> - <a href="creditos">Créditos</a>
               
               <GoogleReCaptchaProvider
                 reCaptchaKey="6LeH9n4cAAAAAAYNdpuyC_ddjiFsbEBXcamoy2F6"
@@ -66,6 +67,44 @@ function Home() {
               não tem como intuíto ser algo realmente<br/>
               útil, mas com certeza não é algo totalmente<br/>
               inútil.</p>
+              <h1>Padrão para o número</h1>
+          <p>Lembre-se de seguir o mesmo padrão útilizado<br/>
+            no Whatsapp, para que não haja erros copie<br/>
+            diretamente do perfil do usuário para qual<br/>
+            vai enviar a mensagem, se o número principal<br/>
+            (depois do DDD) tiver menos que 9 dígitos<br/>
+            coloque-o após o DDD.
+            <br/><br/>
+            O número não deve conter caracteres especiais,<br/>
+            remova espaços, indicador de DDI (+) e traços<br/>
+            que possam ter, o número deve ficar assim:<br/>
+            5511973584242</p>
+          <h1>Modo de uso</h1>
+          <p>
+          Para utilizar nossa ferramente é bem simples<br/>
+          basta colocar o número no formato correto, que<br/>
+          foi explicado acima, escrever sua mensagem, clicar<br/>
+          em enviar e confirmar, se voltar diretamente para<br/>
+          a página inicial significa que tudo deu certo e<br/>
+          sua mensagem foi enviada ao destinatário.
+          </p>
+          <h1>Tecnologias útilizadas</h1>
+          <p>
+          Para a construção desta ferramente<br/>
+          utilizamos apenas 3 tecnologias,<br/>
+          sendo elas <a>React</a>, <a>NextJs</a><br/>
+          e <a>NodeJS</a> para a API de envio.
+          <br/><br/>
+          Para a parte visual HTML e CSS.
+          </p><h1>Conhecimento adquirido</h1>
+          <p>
+          No percurso desse projeto aprendemos<br/>
+          o básico de Next e React, portanto não<br/>
+          é um projeto perfeito, está muito longe disto<br/>
+          bugs e erros são inevitáveis, se o tempo<br/>
+          nos permitir iremos estar sempre melhorando<br/>
+          o sistema em si, em busca de sempre atende-los bem.
+          </p>
         </div>
       </div>
 

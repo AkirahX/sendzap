@@ -1,34 +1,70 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Sendzap - Front-end
 
-## Getting Started
+Uma aplicação web para enviar mensagens de forma anônima via Whatsapp
 
-First, run the development server:
+## Está aplicação depende da [API WaSend](https://github.com/AkirahX/WppSend)
+## Instalação
+
+
 
 ```bash
+git clone https://github.com/AkirahX/sendzap
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Uso
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```javascript
+//pages/[id]/[msg].js
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+//Mude a sessão
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+const response = await fetch('http://suaApiUrl/sendText', {
+            method: 'POST',
+            headers: {
+              'Accept': 'application/json',
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                  sessionName: "SuaSessão", 
+                  number: id,
+                  text: msg
+              }
+          )
+      });
+    return {props: {
+        id: id,
+        msg: msg,
+    }}
+```
+## Colaboradores
+Agradecemos às seguintes pessoas que contribuíram para este projeto:
 
-## Learn More
+<table>
+  <tr>
+    <td align="center">
+      <a href="#">
+        <img src="https://avatars.githubusercontent.com/u/82380880?v=4" width="100px;" alt="Avatar AkirahX"/><br>
+        <sub>
+          <b>AkirahX</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="#">
+        <img src="https://s2.glbimg.com/FUcw2usZfSTL6yCCGj3L3v3SpJ8=/smart/e.glbimg.com/og/ed/f/original/2019/04/25/zuckerberg_podcast.jpg" width="100px;" alt="Bennet"/><br>
+        <sub>
+          <b>Bennet</b>
+        </sub>
+      </a>
+    </td>
+  </tr>
+</table>
 
-To learn more about Next.js, take a look at the following resources:
+## Contribuição
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Este é um projeto que não pretende receber atualizações dos desenvolvedores iniciais, toda pulll request será analisada o mais breve possível.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.

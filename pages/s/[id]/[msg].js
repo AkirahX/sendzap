@@ -16,7 +16,7 @@ export async function getServerSideProps(context){
                   text: msg
               }
           )
-      });
+    });
     return {props: {
         id: id,
         msg: msg,

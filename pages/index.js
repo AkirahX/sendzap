@@ -2,6 +2,12 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import logo from '../public/icone.png'
+import txt1 from '../public/1.png'
+import txt2 from '../public/2.png'
+import txt3 from '../public/3.png'
+import txt4 from '../public/4.png'
+import txt5 from '../public/5.png'
+import txt6 from '../public/6.png'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 
 function Home() {
@@ -48,68 +54,44 @@ function Home() {
                 ></GoogleReCaptchaProvider>
             </form>
           </div>
+          
+        
         </div>
-        <div className={styles.logo}>
-        <Image src={logo} alt="Nify Tech"/>
+        <div className={styles.textRight}>
+            <Image src={txt1} alt="Nifytech" width="500" height="300"/> 
+            <Image src={txt2} alt="Nifytech" width="500" height="300"/>
+            <Image src={txt3} alt="Nifytech" width="500" height="300"/> 
         </div>
-        <div className={styles.whatis}>
-          <br/><br/><br/><br/><br/>
-          <h1>O que é SendZap?</h1>
-          <p>SendZap é uma aplicação web com o<br/>
-             intuíto de enviar mensagens via<br/>
-            whatsapp de forma completamente anônima,<br/>
-            nenhum dado do usuário será enviado<br/>
-            com com a mensagem em si.</p>
-            <br/><br/><br/>
-            <h1>Mas para que criar isto?</h1>
-          <p>Este é um projeto completamente<br/>
-              para apreendizado dos desenvolvedores,<br/>
-              não tem como intuíto ser algo realmente<br/>
-              útil, mas com certeza não é algo totalmente<br/>
-              inútil.</p>
-              <h1>Padrão para o número</h1>
-          <p>Lembre-se de seguir o mesmo padrão útilizado<br/>
-            no Whatsapp, para que não haja erros copie<br/>
-            diretamente do perfil do usuário para qual<br/>
-            vai enviar a mensagem, se o número principal<br/>
-            (depois do DDD) tiver menos que 9 dígitos<br/>
-            coloque-o após o DDD.
-            <br/><br/>
-            O número não deve conter caracteres especiais,<br/>
-            remova espaços, indicador de DDI (+) e traços<br/>
-            que possam ter, o número deve ficar assim:<br/>
-            5511973584242</p>
-          <h1>Modo de uso</h1>
-          <p>
-          Para utilizar nossa ferramente é bem simples<br/>
-          basta colocar o número no formato correto, que<br/>
-          foi explicado acima, escrever sua mensagem, clicar<br/>
-          em enviar e confirmar, se voltar diretamente para<br/>
-          a página inicial significa que tudo deu certo e<br/>
-          sua mensagem foi enviada ao destinatário.
-          </p>
-          <h1>Tecnologias útilizadas</h1>
-          <p>
-          Para a construção desta ferramente<br/>
-          utilizamos apenas 3 tecnologias,<br/>
-          sendo elas <a>React</a>, <a>NextJs</a><br/>
-          e <a>NodeJS</a> para a API de envio.
-          <br/><br/>
-          Para a parte visual HTML e CSS.
-          </p><h1>Conhecimento adquirido</h1>
-          <p>
-          No percurso desse projeto aprendemos<br/>
-          o básico de Next e React, portanto não<br/>
-          é um projeto perfeito, está muito longe disto<br/>
-          bugs e erros são inevitáveis, se o tempo<br/>
-          nos permitir iremos estar sempre melhorando<br/>
-          o sistema em si, em busca de sempre atende-los bem.
-          </p>
+        <div className={styles.textLeft}>
+          <Image src={txt4} alt="Nifytech" width="500" height="300"/> 
+          <Image src={txt5} alt="Nifytech" width="500" height="300"/> 
+          <Image src={txt6} alt="Nifytech" width="500" height="300"/> 
         </div>
+        
+        
       </div>
 
       
   )
 }
-
+//Right >>>>>>>>>>>>> <Image src={txt2} alt="Nifytech" width="500" height="300"/> 
+//Left <<<<<<<<<<<<<<
 export default Home
+
+/*
+
+<div className={styles.logo}>
+        <Image src={logo} alt="Nify Tech"/>
+        </div>
+
+        <div className={styles.textRight}>
+          <Image src={txt1} alt="Nifytech" width="500" height="300"/> 
+          <Image src={txt2} alt="Nifytech" width="500" height="300"/>
+          <Image src={txt3} alt="Nifytech" width="500" height="300"/> 
+        </div><br/>
+        <div className={styles.textLeft}>
+          <Image src={txt4} alt="Nifytech" width="500" height="300"/> 
+          <Image src={txt5} alt="Nifytech" width="500" height="300"/> 
+          <Image src={txt6} alt="Nifytech" width="500" height="300"/> 
+        </div>
+        */

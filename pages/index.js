@@ -1,22 +1,39 @@
 import Head from 'next/head'
 import Image from 'next/image'
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import styles from '../styles/Home.module.css'
-import logo from '../public/icone.png'
-import txt1 from '../public/1.png'
-import txt2 from '../public/2.png'
-import txt3 from '../public/3.png'
-import txt4 from '../public/4.png'
-import txt5 from '../public/5.png'
-import txt6 from '../public/6.png'
 import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
+
 
 function Home() {
 
+
   const numToSend = async event => {
     event.preventDefault()
+
+    const res = await fetch(
+      'http://192.95.46.251:3333/sendText',{
+        body: JSON.stringify({
+          sessionName: "senzap", 
+          number: event.target.num.value,
+          text: event.target.msg.value
+        }),
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        method: 'POST'
+      }
+    )
+    const result = await res.json()
+
+    console.log(result.result)
+
+    /*
     let tamanhoNumero = event.target.num.value
     if(Object.keys(tamanhoNumero).length <= 12){
-      alert('Número inválido, siga o formato DDI DDD XXXXXXXXX')
+      alert('Número inválido, deve ter exatamente 13 digitos, siga o exemplo ou visite a página de ajuda')
       return
     }
     if(Object.keys(tamanhoNumero).length >= 14){
@@ -25,6 +42,8 @@ function Home() {
     }
     alert('Sua mensagem será envia assim que confirmar, após isso não terá como cancelar.')
     location.href = './s/' + event.target.num.value + "/" + `${event.target.msg.value}`
+
+    */
   }
   return (
     <div>
@@ -32,7 +51,6 @@ function Home() {
         <title>Sendzap</title>
         <meta name="description" content="Sendzap, feito para sendar zapzap" />
         <link rel="icon" href="/favicon.ico" />
-        <script data-ad-client="ca-pub-8097473106118097" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
       </Head>
       <div className={styles.nomegrande}>
             <h1>SendZap</h1>

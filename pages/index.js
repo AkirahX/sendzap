@@ -57,17 +57,6 @@ function Home() {
           
         
         </div>
-        <div className={styles.textRight}>
-            <Image src={txt1} alt="Nifytech" width="500" height="300"/> 
-            <Image src={txt2} alt="Nifytech" width="500" height="300"/>
-            <Image src={txt3} alt="Nifytech" width="500" height="300"/> 
-        </div>
-        <div className={styles.textLeft}>
-          <Image src={txt4} alt="Nifytech" width="500" height="300"/> 
-          <Image src={txt5} alt="Nifytech" width="500" height="300"/> 
-          <Image src={txt6} alt="Nifytech" width="500" height="300"/> 
-        </div>
-        
         
       </div>
 
